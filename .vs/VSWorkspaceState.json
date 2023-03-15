@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Business\\Abstract",
+    "\\Business\\Concrete",
+    "\\ConsolUI",
+    "\\DataAccess\\Abstract",
+    "\\DataAccess\\Concrete",
+    "\\DataAccess\\Concrete\\Adonet",
+    "\\DataAccess\\Concrete\\EntityFramework",
+    "\\Entities\\Concrete"
+  ],
+  "SelectedNode": "\\ConsolUI",
+  "PreviewInSolutionExplorer": false
+}
