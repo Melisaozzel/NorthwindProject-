@@ -4,9 +4,11 @@ using Business.Abstract;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business
-{
+{          
+    //İş kodları
     public class ProductManager:IProductService
     { 
          IProductDal _productDal;
@@ -18,7 +20,6 @@ namespace Business
 
         public List<Product> GetAll()
         {
-            //İş kodları
             return _productDal.GetAll();
         }
 
@@ -30,6 +31,11 @@ namespace Business
         public List<Product> GetByUnitePrice(decimal min, decimal max)
         {
             return _productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max);
+        }
+
+        public List<ProductDetailDto> getProductDetailDtos()
+        {
+            return _productDal.GetProductDetails();
         }
     }
 }
