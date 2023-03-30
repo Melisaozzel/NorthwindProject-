@@ -46,7 +46,7 @@ namespace ConsolUI
                 Console.WriteLine(product.ProductName);
             }
 
-            foreach (var product in productManager.getProductDetailDtos())
+            foreach (var product in productManager.GetProductDetailDtos())
             {
                 Console.WriteLine(product.ProductName+"/"+product.CategoryName);
             }

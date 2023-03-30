@@ -2,17 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Utilities.Results;
 using Entities.DTOs;
 
 namespace Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAll();
-        List<Product> GetAllByCategoryId(int id);
-        public List<Product> GetByUnitePrice(decimal min, decimal max);
-
-        List<ProductDetailDto> getProductDetailDtos();
+        IDataResult<List<Product>> GetAll();
+        IDataResult<List<Product>>GetAllByCategoryId(int id);
+        public IDataResult<List<Product>> GetByUnitePrice(decimal min, decimal max);
+        IDataResult<List<ProductDetailDto>> GetProductDetailDtos();
+        IDataResult<Product> GetById(int productId);
+        IResult Add(Product product);
 
     }
 }
